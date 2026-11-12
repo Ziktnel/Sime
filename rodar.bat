@@ -1,5 +1,5 @@
 @echo off
-REM SIME - sobe backend (porta 8010) e frontend (porta 3000).
+REM SIME - sobe backend (porta 8010) e frontend (porta 3010).
 REM Pre-requisitos: Python 3.11+ e Node 20+ no PATH.
 setlocal
 cd /d "%~dp0"
@@ -15,9 +15,9 @@ if not exist frontend\node_modules (
   echo [2/3] Instalando dependencias do frontend...
   pushd frontend && call npm install && popd || goto :erro
 )
-echo [3/3] Iniciando servicos. Acesse http://localhost:3000  (API: http://localhost:8010/api/docs)
-start "SIME API" cmd /k "cd /d %~dp0backend && .venv\Scripts\python.exe -m uvicorn app.main:app --port 8010"
-start "SIME Web" cmd /k "cd /d %~dp0frontend && set OHMNIA_BACKEND_URL=http://localhost:8010&& npm run dev"
+echo [3/3] Iniciando servicos. Acesse http://localhost:3010  (API: http://localhost:8010/api/docs)
+start "SIME API" cmd /k "cd /d %~dp0backend && set OHMNIA_CORS=http://localhost:3010&& .venv\Scripts\python.exe -m uvicorn app.main:app --port 8010"
+start "SIME Web" cmd /k "cd /d %~dp0frontend && set OHMNIA_BACKEND_URL=http://localhost:8010&& npx next dev -p 3010"
 goto :eof
 :erro
 echo Falha na preparacao do ambiente.
