@@ -3,6 +3,9 @@ REM Ohmnia - sobe backend (porta 8000) e frontend (porta 3000).
 REM Pre-requisitos: Python 3.11+ e Node 20+ no PATH.
 setlocal
 cd /d "%~dp0"
+REM Sem Node instalado, usa o Node portatil da pasta do trabalho 3.
+where npm >nul 2>nul || for /d %%A in ("%USERPROFILE%\OneDrive\*rea de Trabalho") do for /d %%B in ("%%~fA\Programa*o para Internet trabalho 3") do set "PATH=%%~fB\.runtime\node;%PATH%"
+where npm >nul 2>nul || (echo Node.js nao encontrado. Instale em https://nodejs.org & goto :erro)
 if not exist backend\.venv (
   echo [1/3] Criando ambiente Python...
   python -m venv backend\.venv || goto :erro
