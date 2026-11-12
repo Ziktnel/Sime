@@ -39,7 +39,7 @@ async def lifespan(app: FastAPI):
         parar.set()
 
 
-app = FastAPI(title="Ohmnia API", version="1.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json", lifespan=lifespan,
+app = FastAPI(title="SIME API", version="1.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json", lifespan=lifespan,
               description="Plataforma operacional acadêmica com dados sintéticos e integrações simuladas.")
 app.add_middleware(CORSMiddleware, allow_origins=get_settings().cors_origins, allow_methods=["*"], allow_headers=["*"])
 

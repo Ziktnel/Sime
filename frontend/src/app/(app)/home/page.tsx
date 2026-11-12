@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Titulo titulo={`Olá, ${s.user.nome.split(" ")[0]}`}
         descricao={`Perfil ${s.user.perfil_nome}. Escolha um módulo abaixo ou use Ctrl+K para buscar uma tela.`} />
-      <div className="mb-6 rounded-xl border border-ambar-300 bg-ambar-300/20 p-4 text-sm text-slate-700 dark:text-slate-200">
+      <div className="mb-6 rounded-xl border border-sime-borda bg-[#f7f8fc] p-4 text-xs leading-relaxed text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
         <b>Ambiente acadêmico.</b> Todos os clientes, medidores, torres e históricos são sintéticos. As integrações externas
         (ERP, MDM, head-end, câmara de comercialização, bot e diretório) são simuladas e podem ser colocadas em modo de falha em
         Gerenciamento → Integrações simuladas.

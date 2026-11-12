@@ -29,7 +29,7 @@ export function DetalheMedidor({ serie, fechar }: { serie: string; fechar: () =>
             <div className="h-40"><ResponsiveContainer><BarChart data={d.telemetria}>
               <XAxis dataKey="data" tickFormatter={(v) => fmtData(v).slice(0, 5)} fontSize={10} /><YAxis domain={[0, 96]} fontSize={10} />
               <Tooltip labelFormatter={(v) => fmtData(String(v))} />
-              <Bar dataKey="leituras">{d.telemetria.map((t: any) => <Cell key={t.data} fill={t.comunicou ? "#14786d" : "#e0607e"} />)}</Bar>
+              <Bar dataKey="leituras">{d.telemetria.map((t: any) => <Cell key={t.data} fill={t.comunicou ? "#5270da" : "#dc2626"} />)}</Bar>
             </BarChart></ResponsiveContainer></div>
           </div>
           {d.enlaces.length > 0 && (

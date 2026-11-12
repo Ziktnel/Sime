@@ -81,13 +81,13 @@ export default function Visao360() {
             <div className="h-72"><ResponsiveContainer><ComposedChart data={d.serie}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" /><XAxis dataKey="referencia" fontSize={11} /><YAxis fontSize={11} />
               <Tooltip formatter={(v: number, n: string) => [fmtNum(v, 1), n]} /><Legend />
-              <Bar dataKey="kwh" name="Consumo (kWh)" fill="#3fb3a3" />
-              {i.mmgd && <Line dataKey="gerado_kwh" name="Gerado (kWh)" stroke="#f2a541" dot={false} />}
-              {i.mmgd && <Line dataKey="injetado_kwh" name="Injetado (kWh)" stroke="#e0607e" dot={false} />}
-              {d.vizinhanca_mediana_kwh && <ReferenceLine y={d.vizinhanca_mediana_kwh} stroke="#5b7fd6" strokeDasharray="4 4" label={{ value: "vizinhança", fontSize: 10 }} />}
+              <Bar dataKey="kwh" name="Consumo (kWh)" fill="#16a34a" />
+              {i.mmgd && <Line dataKey="gerado_kwh" name="Gerado (kWh)" stroke="#ca8a04" dot={false} />}
+              {i.mmgd && <Line dataKey="injetado_kwh" name="Injetado (kWh)" stroke="#dc2626" dot={false} />}
+              {d.vizinhanca_mediana_kwh && <ReferenceLine y={d.vizinhanca_mediana_kwh} stroke="#0ea5e9" strokeDasharray="4 4" label={{ value: "vizinhança", fontSize: 10 }} />}
               {d.diagnostico.achados.filter((a: any) => a.referencia).map((a: any) => {
                 const [m, y] = a.referencia.split("/");
-                return <ReferenceLine key={a.codigo} x={`${y}-${m}`} stroke="#e08a1e" label={{ value: a.codigo, fontSize: 10, position: "top" }} />;
+                return <ReferenceLine key={a.codigo} x={`${y}-${m}`} stroke="#a16207" label={{ value: a.codigo, fontSize: 10, position: "top" }} />;
               })}
             </ComposedChart></ResponsiveContainer></div>
           </Cartao>

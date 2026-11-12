@@ -20,14 +20,14 @@ export default function Indicadores() {
       <div className="grid gap-4 lg:grid-cols-2">
         <Cartao titulo="Entradas x analisadas por mês">
           <div className="h-64"><ResponsiveContainer><LineChart data={d.por_mes}><CartesianGrid strokeDasharray="3 3" /><XAxis dataKey="mes" fontSize={11} /><YAxis fontSize={11} /><Tooltip /><Legend />
-            <Line dataKey="entradas" stroke="#f2a541" /><Line dataKey="analisadas" stroke="#14786d" /></LineChart></ResponsiveContainer></div>
+            <Line dataKey="entradas" stroke="#ca8a04" /><Line dataKey="analisadas" stroke="#5270da" /></LineChart></ResponsiveContainer></div>
         </Cartao>
         <Cartao titulo="Resultado por fabricante">
           <div className="h-64"><ResponsiveContainer><BarChart data={d.por_fabricante}><XAxis dataKey="fabricante" fontSize={11} /><YAxis fontSize={11} /><Tooltip /><Legend />
-            <Bar dataKey="regular" stackId="a" fill="#14786d" /><Bar dataKey="irregular" stackId="a" fill="#e0607e" /></BarChart></ResponsiveContainer></div>
+            <Bar dataKey="regular" stackId="a" fill="#5270da" /><Bar dataKey="irregular" stackId="a" fill="#dc2626" /></BarChart></ResponsiveContainer></div>
         </Cartao>
         <Cartao titulo="Tipos de irregularidade" className="lg:col-span-2">
-          <div className="h-56"><ResponsiveContainer><BarChart data={d.irregularidades} layout="vertical"><XAxis type="number" fontSize={11} /><YAxis type="category" dataKey="tipo" width={220} fontSize={11} /><Tooltip /><Bar dataKey="quantidade" fill="#f2a541" /></BarChart></ResponsiveContainer></div>
+          <div className="h-56"><ResponsiveContainer><BarChart data={d.irregularidades} layout="vertical"><XAxis type="number" fontSize={11} /><YAxis type="category" dataKey="tipo" width={220} fontSize={11} /><Tooltip /><Bar dataKey="quantidade" fill="#ca8a04" /></BarChart></ResponsiveContainer></div>
         </Cartao>
       </div>
     </div>

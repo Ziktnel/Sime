@@ -415,7 +415,7 @@ def popular(db: Session, n_instalacoes: int = 1200, seed: int | None = None) -> 
         ag.ultima_execucao = hoje  # evita disparo imediato no primeiro start
     jobs.disparar(db, "atualizar_base_mdm", usuario="seed", sincrono=True)
     admin = db.query(Usuario).filter_by(matricula="OH0001").first()
-    db.add(Notificacao(usuario_id=admin.id, titulo="Bem-vindo à Ohmnia", texto="Base sintética gerada. Explore os módulos pelo menu.", link="/home"))
+    db.add(Notificacao(usuario_id=admin.id, titulo="Bem-vindo ao SIME", texto="Base sintética gerada. Explore os módulos pelo menu.", link="/home"))
     db.commit()
     return {**resumo, "instalacoes": len(insts), "medidores_total": len(meds), "erbs": len(erbs)}
 

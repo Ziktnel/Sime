@@ -3,8 +3,8 @@ import "./globals.css";
 import { ToastProvider } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Ohmnia — Plataforma Operacional",
-  description: "Aplicação acadêmica de operação de medição com dados sintéticos.",
+  title: "SIME | Gestão operacional",
+  description: "Painel acadêmico de gestão operacional de medição, com dados sintéticos.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

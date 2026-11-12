@@ -293,7 +293,7 @@ def laudo(aid: int, _: Usuario = Depends(require_permission(f"{P}:relatorios:vis
 <style>body{{font-family:system-ui;max-width:760px;margin:32px auto;color:#1b2b2b}}h1{{color:#0f5e5c}}
 table{{width:100%;border-collapse:collapse}}td{{border:1px solid #cfdcdc;padding:6px 10px}}td:first-child{{background:#eef5f4;width:40%}}
 .aviso{{margin-top:24px;font-size:12px;color:#5b6b6b}}</style>
-<h1>Laudo técnico {d['numero_laudo']}</h1><p>Ohmnia · Laboratório de Medidores — documento acadêmico com dados fictícios.</p>
+<h1>Laudo técnico {d['numero_laudo']}</h1><p>SIME · Laboratório de Medidores — documento acadêmico com dados fictícios.</p>
 <table><tr><td>Protocolo</td><td>{d['protocolo']}</td></tr><tr><td>Medidor</td><td>{d['medidor']} — {d['fabricante']} {d['modelo']}</td></tr>
 <tr><td>Instalação</td><td>{d['instalacao']}</td></tr><tr><td>Solicitante</td><td>{d['solicitante']}</td></tr>
 <tr><td>Data da análise</td><td>{d['dt_analise']}</td></tr><tr><td>Erro de exatidão</td><td>{d['erro_percentual']} %</td></tr>

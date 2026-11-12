@@ -49,7 +49,7 @@ export default function Ccee() {
           </div>
           <Cartao titulo="Curva de carga (kWh por intervalo)">
             <div className="h-72"><ResponsiveContainer><AreaChart data={res.pontos}><CartesianGrid strokeDasharray="3 3" /><XAxis dataKey="instante" tickFormatter={(v) => v.slice(5, 13).replace("T", " ")} fontSize={10} minTickGap={40} /><YAxis fontSize={11} /><Tooltip />
-              <Area dataKey="ativa_kwh" name="Ativa" stroke="#14786d" fill="#ade3da" /><Area dataKey="reativa_kvarh" name="Reativa" stroke="#f2a541" fill="#f8cf7f" fillOpacity={0.3} /></AreaChart></ResponsiveContainer></div>
+              <Area dataKey="ativa_kwh" name="Ativa" stroke="#5270da" fill="#c9d3f5" /><Area dataKey="reativa_kvarh" name="Reativa" stroke="#ca8a04" fill="#f5d27a" fillOpacity={0.3} /></AreaChart></ResponsiveContainer></div>
           </Cartao>
         </div>
       ))}

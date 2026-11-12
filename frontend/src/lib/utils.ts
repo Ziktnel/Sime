@@ -19,11 +19,11 @@ export const rotulo = (v: unknown) =>
   v === null || v === undefined || v === "" ? "—" : String(v).replace(/_/g, " ").toLowerCase().replace(/^./, (c) => c.toUpperCase());
 
 const TOM: Record<string, string> = {
-  ok: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
-  alerta: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-  erro: "bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-300",
-  info: "bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300",
-  neutro: "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300",
+  ok: "bg-[#eef9f1] text-[#15803d] dark:bg-emerald-900/40 dark:text-emerald-300",
+  alerta: "bg-[#fff8e5] text-[#a16207] dark:bg-amber-900/40 dark:text-amber-300",
+  erro: "bg-[#fef0ef] text-[#b91c1c] dark:bg-rose-900/40 dark:text-rose-300",
+  info: "bg-[#eef2ff] text-[#4263c5] dark:bg-marca-900/50 dark:text-marca-200",
+  neutro: "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300",
 };
 const OK = /^(comunicando|concluid|concluido|finalizada|aprovada|executad|regular|ativo|corrigido|reativado|substituido|success|lida|lido|apto|vinculado|ok|disponivel|reenviado|encerrada|executado)/i;
 const ERRO = /^(sem comunica|medidor nao|irregular|erro|error|falha|critico|cancel|interrompida|suspenso|descart|timeout|reprov|alto|nao_lido|atrasada|defeito|inativo|devolvida)/i;
@@ -37,4 +37,4 @@ export function tomStatus(v: unknown): string {
   return s ? TOM.info : TOM.neutro;
 }
 
-export const CORES_GRAFICO = ["#14786d", "#f2a541", "#3fb3a3", "#e0607e", "#5b7fd6", "#8e6cc9", "#7a8a8a"];
+export const CORES_GRAFICO = ["#5270da", "#ca8a04", "#16a34a", "#dc2626", "#0ea5e9", "#8b5cf6", "#94a3b8"];

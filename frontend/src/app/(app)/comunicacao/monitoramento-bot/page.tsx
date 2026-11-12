@@ -18,7 +18,7 @@ export default function MonitoramentoBot() {
       {!d ? <Carregando /> : d.pontos.length === 0 ? <Vazio texto="O bot não enviou métricas (integração em modo vazio)." /> : (
         <Cartao titulo={d.alerta ? "⚠ CPU acima de 80% nos últimos 30 minutos" : "Operação normal"}>
           <div className="h-80"><ResponsiveContainer><LineChart data={d.pontos}><CartesianGrid strokeDasharray="3 3" /><XAxis dataKey="instante" tickFormatter={(v) => v.slice(11, 16)} fontSize={11} minTickGap={30} /><YAxis domain={[0, 100]} fontSize={11} /><Tooltip /><Legend />
-            <ReferenceLine y={80} stroke="#e0607e" strokeDasharray="4 4" /><Line dataKey="cpu_pct" name="CPU %" stroke="#14786d" dot={false} /><Line dataKey="memoria_pct" name="Memória %" stroke="#f2a541" dot={false} /></LineChart></ResponsiveContainer></div>
+            <ReferenceLine y={80} stroke="#dc2626" strokeDasharray="4 4" /><Line dataKey="cpu_pct" name="CPU %" stroke="#5270da" dot={false} /><Line dataKey="memoria_pct" name="Memória %" stroke="#ca8a04" dot={false} /></LineChart></ResponsiveContainer></div>
         </Cartao>
       )}
     </div>

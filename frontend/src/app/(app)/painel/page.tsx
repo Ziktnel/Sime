@@ -47,7 +47,7 @@ export default function Painel() {
                 <XAxis dataKey="data" tickFormatter={(v) => fmtData(v).slice(0, 5)} fontSize={11} />
                 <YAxis domain={["dataMin - 2", 100]} fontSize={11} />
                 <Tooltip labelFormatter={(v) => fmtData(String(v))} formatter={(v: number) => [`${v}%`, "Comunicando"]} />
-                <Area dataKey="percentual" stroke="#14786d" fill="#ade3da" />
+                <Area dataKey="percentual" stroke="#5270da" fill="#c9d3f5" />
               </AreaChart></ResponsiveContainer></div>
             </Cartao>
             <Cartao titulo="Status de comunicação">
@@ -67,13 +67,13 @@ export default function Painel() {
               <div className="h-64"><ResponsiveContainer><BarChart data={d.consumo_mensal}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" /><XAxis dataKey="referencia" fontSize={11} /><YAxis fontSize={11} />
                 <Tooltip formatter={(v: number) => [`${fmtNum(v, 1)} MWh`, "Consumo"]} />
-                <Bar dataKey="mwh" fill="#14786d" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="mwh" fill="#5270da" radius={[4, 4, 0, 0]} />
               </BarChart></ResponsiveContainer></div>
             </Cartao>
             <Cartao titulo="Análises de laboratório por status">
               <div className="h-64"><ResponsiveContainer><BarChart data={d.analises_por_status} layout="vertical">
                 <XAxis type="number" fontSize={11} /><YAxis type="category" dataKey="status" tickFormatter={rotulo} fontSize={10} width={120} />
-                <Tooltip labelFormatter={rotulo} /><Bar dataKey="quantidade" fill="#f2a541" radius={[0, 4, 4, 0]} />
+                <Tooltip labelFormatter={rotulo} /><Bar dataKey="quantidade" fill="#ca8a04" radius={[0, 4, 4, 0]} />
               </BarChart></ResponsiveContainer></div>
             </Cartao>
           </div>

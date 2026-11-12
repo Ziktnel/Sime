@@ -138,7 +138,7 @@ export function RecursoPage({ chave }: { chave: string }) {
       )}
 
       {erro && <Erro texto={erro} tentar={carregar} />}
-      <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
+      <div className="overflow-x-auto rounded-xl border border-sime-borda bg-white shadow-sime dark:border-slate-700 dark:bg-slate-900">
         <table className="tabela">
           <thead>
             <tr>

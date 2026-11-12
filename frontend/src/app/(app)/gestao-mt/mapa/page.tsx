@@ -7,8 +7,8 @@ import { api, qs } from "@/lib/api";
 import { cn, rotulo } from "@/lib/utils";
 
 const MUNICIPIOS = ["Vale Verde", "Porto Claro", "Serra Alta", "Rio Manso", "Campo Belo do Sul", "Nova Aurora", "Santa Luzia do Mar", "Pedra Azul do Norte"];
-const COR: Record<string, string> = { COMUNICANDO: "#14786d", INTERMITENTE: "#f2a541", "SEM COMUNICACAO": "#e0607e", "MEDIDOR NAO RESPONDE": "#b4235a", RELOGIO_CRITICO: "#8e6cc9" };
-const COR_OP: Record<string, string> = { "Aurora Tel": "#5b7fd6", "Brisa Móvel": "#e08a1e", "Celta Net": "#7a8a8a" };
+const COR: Record<string, string> = { COMUNICANDO: "#5270da", INTERMITENTE: "#ca8a04", "SEM COMUNICACAO": "#dc2626", "MEDIDOR NAO RESPONDE": "#b4235a", RELOGIO_CRITICO: "#8b5cf6" };
+const COR_OP: Record<string, string> = { "Aurora Tel": "#0ea5e9", "Brisa Móvel": "#a16207", "Celta Net": "#94a3b8" };
 
 /** Mapa em SVG com projeção equiretangular simples — dispensa provedores de mapa externos. */
 export default function Mapa() {
